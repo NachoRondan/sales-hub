@@ -14,8 +14,8 @@ import { Link } from 'react-router-dom';
 export default function Navbar ({user}){
 
   let settings = [
-    {option:'Mi Perfil', link:'/login'},
-    {option:'Mis Publicaciones', link:'/login'},
+    {option:'Mi Perfil', link:'/mi-perfil'},
+    {option:'Mis Publicaciones', link:'/mis-publicaciones'},
   ];
 
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -36,8 +36,6 @@ export default function Navbar ({user}){
           <Typography
             variant="h6"
             noWrap
-            component={Link}
-            to='/home'
             sx={{
               fontStyle: 'italic',
               mr: 2,

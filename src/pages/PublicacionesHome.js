@@ -18,6 +18,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
+import { Link } from 'react-router-dom';
 
 function createData(title, activePosts, sold, reimbursement, stock) {
   return {
@@ -167,7 +168,7 @@ function EnhancedTableToolbar(props) {
           </IconButton>
         </Tooltip>
         <Tooltip title="Nueva Publicacion">
-          <IconButton>
+          <IconButton component={Link} to={'/nueva-publicacion/categoria'}>
             <AddCircleIcon color='success' fontSize='large'/>
           </IconButton>
         </Tooltip>

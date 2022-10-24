@@ -29,8 +29,8 @@ export default function Navbar ({user}){
   };
 
   return (
-    <AppBar position="sticky" >
-      <Container maxWidth="xl" >
+    <AppBar position="sticky" elevation={0}>
+      <Container maxWidth="xl">
         <Toolbar disableGutters>
         <Box sx={{display: 'flex', width: 1, justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography

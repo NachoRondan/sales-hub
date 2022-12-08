@@ -20,6 +20,8 @@ import { visuallyHidden } from '@mui/utils';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { Link } from 'react-router-dom';
 
+import BackgroundLayout from '../Layout/BackgroundLayout';
+
 function createData(title, activePosts, sold, reimbursement, stock) {
   return {
     title,
@@ -177,7 +179,7 @@ function EnhancedTableToolbar(props) {
 }
 
 
-export default function EnhancedTable() {
+function EnhancedTableComponent() {
   const [order, setOrder] = React.useState('asc');
   const [orderBy, setOrderBy] = React.useState('activePosts');
   const [page, setPage] = React.useState(0);
@@ -276,3 +278,16 @@ export default function EnhancedTable() {
     </Box>
   );
 }
+
+
+
+
+function PublicacionesHome() { 
+
+  return (
+    <BackgroundLayout component={<EnhancedTableComponent/>} />
+  )
+}
+
+
+export default PublicacionesHome;

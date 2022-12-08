@@ -5,7 +5,9 @@ import { Stack, Typography, Button } from '@mui/material';
 import Search from './Search';
 import { Link } from 'react-router-dom';
 
-export default function SeleccionarSubcategoria() {
+import BackgroundLayout from '../Layout/BackgroundLayout';
+
+function SeleccionarSubcategoriaComponent() {
 
   const categorias = ['Consolas','Juegos','Accesorios','Audio','Monitores','Placas de Video','Micro-Procesadores','Perifericos','Streamer']
  
@@ -32,4 +34,11 @@ export default function SeleccionarSubcategoria() {
       </Box>
     </Box>
   );
+}
+
+export default function SeleccionarSubcategoria() {
+
+  return (
+   <BackgroundLayout component={<SeleccionarSubcategoriaComponent/>} />
+ )
 }

@@ -5,7 +5,9 @@ import { Stack, Typography, Button } from '@mui/material';
 import Search from './Search';
 import { Link } from 'react-router-dom';
 
-export default function SeleccionarCategoria() {
+import BackgroundLayout from '../Layout/BackgroundLayout';
+
+function SeleccionarCategoriaComponent() {
 
   const categorias = ['Inmuebles','Calzado','Indumentaria','Vehiculos','Gaming','Tecnologia','Articulos de Limpieza','Electrodomesticos','Hogar']
  
@@ -34,4 +36,11 @@ export default function SeleccionarCategoria() {
       </Box>
     </Box>
   );
+}
+
+export default function SeleccionarCategoria() { 
+  
+  return (
+    <BackgroundLayout component={<SeleccionarCategoriaComponent/>} />
+  )
 }

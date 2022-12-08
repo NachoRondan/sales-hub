@@ -79,7 +79,7 @@ const headCells = [
     id: 'activePosts',
     numeric: true,
     disablePadding: false,
-    label: 'Publicaiones Activas',
+    label: 'Publicaciones Activas',
   },
   {
     id: 'sold',
@@ -234,7 +234,7 @@ function EnhancedTableComponent() {
                       key={row.title}
                     >
                       <TableCell padding="checkbox">
-                        <IconButton aria-label="edit">
+                        <IconButton aria-label="edit" href="/publicaciones-activas">
                             <EditIcon />
                         </IconButton>
                       </TableCell>

@@ -17,7 +17,7 @@ import { Cake, Work } from "@mui/icons-material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 
-function PerfilComponent() {
+function PublicacionesActivasComponent() {
   const handleSubmit = () => {
     console.log("hola");
   };
@@ -114,8 +114,8 @@ function PerfilComponent() {
   );
 }
 
-function Perfil() {
-  return <BackgroundLayout component={<PerfilComponent />} />;
+function PublicacionesActivas() {
+  return <BackgroundLayout component={<PublicacionesActivasComponent />} />;
 }
 
-export default Perfil;
+export default PublicacionesActivas;

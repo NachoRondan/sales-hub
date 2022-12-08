@@ -32,9 +32,9 @@ function DetalleProductoComponent() {
             margin="normal"
             required
             fullWidth
-            id="talle"
-            label="Talle"
-            name="talle"
+            id="modelo"
+            label="Modelo"
+            name="modelo"
             autoFocus
           />
           <TextField
@@ -71,12 +71,27 @@ function DetalleProductoComponent() {
             style={{ textDecoration: "none", color: "unset" }}
           >
             <Button
+              color="inherit"
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
               Seleccionar donde publicar
+            </Button>
+          </Link>
+          <Link
+            to={"/nueva-publicacion/subcategoria"}
+            style={{ textDecoration: "none", color: "unset" }}
+          >
+            <Button
+              color="inherit"
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Volver
             </Button>
           </Link>
         </Box>

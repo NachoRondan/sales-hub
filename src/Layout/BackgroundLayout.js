@@ -2,11 +2,6 @@ import { useNavigate } from "react-router-dom";
 
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import TextField from '@mui/material/TextField';
-import Container from '@mui/material/Container';
-import { Button, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
 
 // Componente para normalizar los estilos de la aplicacion en todas sus paginas
 // Recibe el componente a mostrar como props.component
@@ -31,7 +26,7 @@ const BackgroundLayout = (props) => {
               px={8}
               py={4}
               sx={{ borderRadius: '16px' }}
-              bgcolor="white"
+              bgcolor="#f5f5f5"
               w={"100%"}
               marginTop={"1em"}
               marginBottom={"1em"}

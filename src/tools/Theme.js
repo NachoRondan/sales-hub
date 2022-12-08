@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material";
 
-const mainColor = '#fffff'
+const mainColor = '#f5f5f5'
 //const mainSecondaryColor = '#2b1a46'
 const mainSuccessColor = '#009c57'
 const mainBlack = '#1A2027'

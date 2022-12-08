@@ -9,14 +9,13 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
-import { Button } from "@mui/material";
-
 import { Stack } from "@mui/material";
 
 export default function Navbar({ user }) {
   let settings = [
     { option: "Mi Perfil", link: "/mi-perfil" },
     { option: "Mis Publicaciones", link: "/mis-publicaciones" },
+    { option: "Dashboard", link: "/dashboard" },
   ];
 
   const [anchorElUser, setAnchorElUser] = React.useState(null);

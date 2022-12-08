@@ -32,7 +32,20 @@ function SeleccionarCategoriaComponent() {
         </Grid>
       </Stack>
       <Box flex={12} sx={{ display: 'flex', justifyContent:'center'}}>
-        <Button variant='outlined' color='info'>Cancelar</Button>
+      <Link
+            to={"/mis-publicaciones"}
+            style={{ textDecoration: "none", color: "unset" }}
+          >
+            <Button
+              color="inherit"
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Volver
+            </Button>
+          </Link>
       </Box>
     </Box>
   );

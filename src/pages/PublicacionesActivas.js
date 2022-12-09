@@ -10,11 +10,42 @@ import {
   Typography,
   Avatar,
   Grid,
+  Stack,
 } from "@mui/material";
 
 import { Cake, Work } from "@mui/icons-material";
 
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+
+function stringToColor(string) {
+  let hash = 0;
+  let i;
+
+  /* eslint-disable no-bitwise */
+  for (i = 0; i < string.length; i += 1) {
+    hash = string.charCodeAt(i) + ((hash << 5) - hash);
+  }
+
+  let color = '#';
+
+  for (i = 0; i < 3; i += 1) {
+    const value = (hash >> (i * 8)) & 0xff;
+    color += `00${value.toString(16)}`.slice(-2);
+  }
+  /* eslint-enable no-bitwise */
+
+  return color;
+}
+
+function stringAvatar(name) {
+  return {
+    sx: {
+      bgcolor: stringToColor(name),
+    },
+    children: `${name.split(' ')[0][0]}${name.split(' ')[1][0]}`,
+  };
+}
+
 
 
 function PublicacionesActivasComponent() {
@@ -31,12 +62,12 @@ function PublicacionesActivasComponent() {
           alignContent={"center"}
           alignItems={"center"}
         >
-          <Avatar src={"picture"} sx={{ width: 128, height: 128 }} />
+        
 
 
           <Grid container direction="row" alignItems="center">
             <Grid item>
-              <AccountCircleIcon></AccountCircleIcon>
+            <Avatar>RF</Avatar>
             </Grid>
             <Grid item>
               <Box
@@ -93,17 +124,17 @@ function PublicacionesActivasComponent() {
             <Typography variant="h5">Vinculacion de Plataformas</Typography>
             <FormGroup>
               <FormControlLabel
-                control={<Switch />}
+                control={<Switch color={"success"}  />}
                 label={<Typography variant="h4">Mercado Libre</Typography>}
               />
               <Divider p={2} />
               <FormControlLabel
-                control={<Switch />}
+                control={<Switch color={"success"}  />}
                 label={<Typography variant="h4">Facebook</Typography>}
               />
               <Divider />
               <FormControlLabel
-                control={<Switch />}
+                control={<Switch color={"success"}  />}
                 label={<Typography variant="h4">Instagram</Typography>}
               />
             </FormGroup>

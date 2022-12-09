@@ -8,13 +8,17 @@ import {
   FormGroup,
   Switch,
   Typography,
-  Avatar,
   Grid,
 } from "@mui/material";
 
 import { Cake, Work } from "@mui/icons-material";
 
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+
+import AvatarProfile from "../components/Avatar";
+
+
+
 
 
 function PerfilComponent() {
@@ -24,6 +28,7 @@ function PerfilComponent() {
 
   return (
     <>
+        <Box>
       <Grid container spacing={0}>
         <Box
           bgcolor={"f5f5f5"}
@@ -31,12 +36,12 @@ function PerfilComponent() {
           alignContent={"center"}
           alignItems={"center"}
         >
-          <Avatar src={"picture"} sx={{ width: 128, height: 128 }} />
-
-
+          
+          <AvatarProfile sx={{height: 128, width: 128}}/>
+          
           <Grid container direction="row" alignItems="center">
             <Grid item>
-              <AccountCircleIcon></AccountCircleIcon>
+           <AccountCircleIcon/>
             </Grid>
             <Grid item>
               <Box
@@ -93,29 +98,33 @@ function PerfilComponent() {
             <Typography variant="h5">Vinculacion de Plataformas</Typography>
             <FormGroup>
               <FormControlLabel
-                control={<Switch />}
+                control={<Switch color={"success"} />}
                 label={<Typography variant="h4">Mercado Libre</Typography>}
               />
               <Divider p={2} />
               <FormControlLabel
-                control={<Switch />}
+                control={<Switch color={"success"}  />}
                 label={<Typography variant="h4">Facebook</Typography>}
               />
               <Divider />
               <FormControlLabel
-                control={<Switch />}
+                control={<Switch color={"success"}  />}
                 label={<Typography variant="h4">Instagram</Typography>}
               />
             </FormGroup>
           </Box>
         </Box>
       </Grid>
+
+  
+
+      </Box>
     </>
   );
 }
 
 function Perfil() {
-  return <BackgroundLayout component={<PerfilComponent />} />;
+  return <BackgroundLayout  component={<PerfilComponent />} />;
 }
 
 export default Perfil;

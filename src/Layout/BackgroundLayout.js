@@ -1,7 +1,12 @@
 import { useNavigate } from "react-router-dom";
 
-import * as React from 'react';
-import Box from '@mui/material/Box';
+import * as React from "react";
+import Box from "@mui/material/Box";
+
+import { Button } from "@mui/material";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+
+import IconButton from '@mui/material/IconButton';
 
 // Componente para normalizar los estilos de la aplicacion en todas sus paginas
 // Recibe el componente a mostrar como props.component
@@ -11,6 +16,7 @@ const BackgroundLayout = (props) => {
   return (
     <>
       <Box
+        minHeight={"512px"}
         display="flex"
         bgcolor="#ffcc00"
         justifyContent={"center"}
@@ -19,27 +25,27 @@ const BackgroundLayout = (props) => {
         alignItems="center"
         px={8}
       >
+        <Box
+          px={8}
+          py={4}
+          sx={{ borderRadius: "16px" }}
+          bgcolor="#f5f5f5"
+          w={"100%"}
+          marginTop={"1em"}
+          marginBottom={"1em"}
+        >
 
-          <Box transition=".3s ease" bgcolor={"ffcc00"}>
-            <Box
-              
-              px={8}
-              py={4}
-              sx={{ borderRadius: '16px' }}
-              bgcolor="#f5f5f5"
-              w={"100%"}
-              marginTop={"1em"}
-              marginBottom={"1em"}
-            >
-              {/*history bar*/}
-  {/*             <Button mb="3" onClick={() => navigate(-1)}>
-                <ArrowBackIcon />
-              </Button> */}
-              {/*Componente a mostrar*/}
-              {props.component}
-            </Box>
-          </Box>
+        
+            
+ 
 
+        <IconButton color="secondary" aria-label="add to shopping cart" onClick={() => {navigate(-1);}}>
+          <ArrowBackIcon />
+        </IconButton>
+                
+
+          {props.component}
+        </Box>
       </Box>
     </>
   );

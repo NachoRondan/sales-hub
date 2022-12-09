@@ -11,6 +11,8 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 import { Stack } from "@mui/material";
 
+import AvatarProfile from "./Avatar";
+
 export default function Navbar({ user }) {
   let settings = [
     { option: "Mi Perfil", link: "/mi-perfil" },
@@ -63,7 +65,7 @@ export default function Navbar({ user }) {
 
             <Box sx={{ flexGrow: 0 }}>
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar src={"picture"} />
+                <AvatarProfile sx={{width: 32, height: 32}} m={"1em"} />
               </IconButton>
               <Menu
                 sx={{ mt: "45px" }}

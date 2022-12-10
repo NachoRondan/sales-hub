@@ -5,7 +5,9 @@ import { Stack, Typography, Button } from '@mui/material';
 import Search from './Search';
 import { Link } from 'react-router-dom';
 
-export default function SeleccionarSubcategoria() {
+import BackgroundLayout from '../Layout/BackgroundLayout';
+
+function SeleccionarSubcategoriaComponent() {
 
   const categorias = ['Consolas','Juegos','Accesorios','Audio','Monitores','Placas de Video','Micro-Procesadores','Perifericos','Streamer']
  
@@ -28,8 +30,28 @@ export default function SeleccionarSubcategoria() {
         </Grid>
       </Stack>
       <Box flex={12} sx={{ display: 'flex', justifyContent:'center'}}>
-        <Button variant='outlined' color='info'>Cancelar</Button>
+      <Link
+            to={"/nueva-publicacion/categoria"}
+            style={{ textDecoration: "none", color: "unset" }}
+          >
+            <Button
+              color="inherit"
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Volver
+            </Button>
+          </Link>
       </Box>
     </Box>
   );
+}
+
+export default function SeleccionarSubcategoria() {
+
+  return (
+   <BackgroundLayout component={<SeleccionarSubcategoriaComponent/>} />
+ )
 }

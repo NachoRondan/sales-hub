@@ -5,7 +5,9 @@ import { Stack, Typography, Button } from '@mui/material';
 import Search from './Search';
 import { Link } from 'react-router-dom';
 
-export default function SeleccionarCategoria() {
+import BackgroundLayout from '../Layout/BackgroundLayout';
+
+function SeleccionarCategoriaComponent() {
 
   const categorias = ['Inmuebles','Calzado','Indumentaria','Vehiculos','Gaming','Tecnologia','Articulos de Limpieza','Electrodomesticos','Hogar']
  
@@ -30,8 +32,28 @@ export default function SeleccionarCategoria() {
         </Grid>
       </Stack>
       <Box flex={12} sx={{ display: 'flex', justifyContent:'center'}}>
-        <Button variant='outlined' color='info'>Cancelar</Button>
+      <Link
+            to={"/mis-publicaciones"}
+            style={{ textDecoration: "none", color: "unset" }}
+          >
+            <Button
+              color="inherit"
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Volver
+            </Button>
+          </Link>
       </Box>
     </Box>
   );
+}
+
+export default function SeleccionarCategoria() { 
+  
+  return (
+    <BackgroundLayout component={<SeleccionarCategoriaComponent/>} />
+  )
 }

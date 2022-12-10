@@ -18,6 +18,7 @@ export default function Navbar({ user }) {
     { option: "Mi Perfil", link: "/mi-perfil" },
     { option: "Mis Publicaciones", link: "/mis-publicaciones" },
     { option: "Dashboard", link: "/dashboard" },
+    { option: "Logout", link: "/logout" },
   ];
 
   const [anchorElUser, setAnchorElUser] = React.useState(null);

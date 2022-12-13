@@ -44,24 +44,23 @@ export default function Navbar({ user }) {
             }}
           >
             <Stack direction="row" spacing={2}>
-              <Link to="/" underline="none">
-                <img src="sales-hub-sx.png" alt="logo" />
-              </Link>
+                <Link to="/" underline="none">
+                  <img src="sales-hub-sx.png" alt="logo" />
+                </Link>
 
-              <Typography
-                underline="none"
-                variant="h6"
-                noWrap
-                sx={{
-                  fontStyle: "italic",
-                  mr: 2,
-                  fontWeight: 700,
-                  color: "inherit",
-                  textDecoration: "none",
-                }}
-              >
-                SalesHub
-              </Typography>
+                <Typography
+                  underline="none"
+                  variant="h6"
+                  sx={{
+                    fontStyle: "italic",
+                    mr: 2,
+                    fontWeight: 700,
+                    color: "inherit",
+                    textDecoration: "none",
+                  }}
+                >
+                  SalesHub
+                </Typography>
             </Stack>
 
             <Box sx={{ flexGrow: 0 }}>

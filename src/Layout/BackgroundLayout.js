@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import * as React from "react";
 import Box from "@mui/material/Box";
 
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 import IconButton from '@mui/material/IconButton';
@@ -42,6 +42,7 @@ const BackgroundLayout = (props) => {
         <IconButton color="secondary" aria-label="add to shopping cart" onClick={() => {navigate(-1);}}>
           <ArrowBackIcon />
         </IconButton>
+        <Typography variant="h4">{props.title ? props.title : ""}</Typography>
                 
 
           {props.component}

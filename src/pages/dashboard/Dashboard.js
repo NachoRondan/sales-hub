@@ -40,6 +40,7 @@ function DashboardContent() {
             <Grid container spacing={3}>
               {/* Chart */}
               <Grid item xs={12} md={8} lg={9}>
+              
                 <Paper
                   sx={{
                     p: 2,
@@ -48,7 +49,8 @@ function DashboardContent() {
                     height: 240,
                   }}
                 >
-                  <Chart />
+ 
+                  <BarChartComponent />
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
@@ -70,9 +72,29 @@ function DashboardContent() {
                   <Orders />
                 </Paper>
               </Grid>
-              <Grid item xs={12}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <BarChartComponent />
+              <Grid item xs={12} md={8} lg={9}>
+              
+              <Paper
+                sx={{
+                  p: 2,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: 240,
+                }}
+              >
+                <Chart />
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={4} lg={3}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 240,
+                  }}
+                >
+                  <Deposits />
                 </Paper>
               </Grid>
             </Grid>
@@ -85,6 +107,6 @@ function DashboardContent() {
 
 export default function Dashboard() {
   return (
-    <BackgroundLayout component={<DashboardContent/>} />
+    <BackgroundLayout title="Dashboard" component={<DashboardContent/>} />
   )
 }

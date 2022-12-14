@@ -124,7 +124,7 @@ function PerfilComponent() {
 }
 
 function Perfil() {
-  return <BackgroundLayout  component={<PerfilComponent />} />;
+  return <BackgroundLayout title="Perfil" component={<PerfilComponent />} />;
 }
 
 export default Perfil;

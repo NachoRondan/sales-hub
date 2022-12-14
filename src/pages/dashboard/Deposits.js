@@ -10,12 +10,12 @@ function preventDefault(event) {
 export default function Deposits() {
   return (
     <React.Fragment>
-      <Title>Recaudado hoy</Title>
+      <Title>Recaudado mensual</Title>
       <Typography component="p" variant="h4">
         $366,024.00
       </Typography>
       <Typography color="text.secondary" sx={{ flex: 1 }}>
-        por 2367 ventas
+        por 13457 ventas
       </Typography>
       <div>
         <Link color="primary" href="#" onClick={preventDefault}>

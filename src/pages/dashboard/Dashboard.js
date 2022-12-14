@@ -9,6 +9,8 @@ import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
 import BackgroundLayout from '../../Layout/BackgroundLayout';
+import BarChartComponent from '../../components/BarChart';
+
 
 
 const mdTheme = createTheme();
@@ -17,6 +19,7 @@ function DashboardContent() {
 
   return (
     <ThemeProvider theme={mdTheme}>
+      
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
 
@@ -61,10 +64,15 @@ function DashboardContent() {
                   <Deposits />
                 </Paper>
               </Grid>
-              {/* Recent Orders */}
+              {/* Bar Chart */}
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
                   <Orders />
+                </Paper>
+              </Grid>
+              <Grid item xs={12}>
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+                  <BarChartComponent />
                 </Paper>
               </Grid>
             </Grid>

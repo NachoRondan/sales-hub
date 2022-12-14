@@ -16,7 +16,7 @@ const BackgroundLayout = (props) => {
   return (
     <>
       <Box
-        minHeight={"512px"}
+
         display="flex"
         bgcolor="#ffcc00"
         justifyContent={"center"}

@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import { Box } from '@mui/material';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
@@ -56,6 +57,7 @@ const styles = theme => ({
 const tiers = [
   {
     title: 'Gratis',
+    subheader: '-',
     price: '0',
     description: [
       '1 analista de ventas',
@@ -81,6 +83,7 @@ const tiers = [
   },
   {
     title: 'Pequeñas empresas',
+    subheader: '-',
     price: '30',
     description: [
       '10 empleados',
@@ -94,6 +97,7 @@ const tiers = [
   },
   {
     title: 'Grandes empresas',
+    subheader: '-',
     price: '45',
     description: [
       'Usuarios ilimitados',
@@ -149,27 +153,29 @@ function Pricing(props) {
             <Grid item key={tier.title} xs={12} sm={tier.title === 'Grandes empresas' || tier.title === 'Pequeñas empresas' ? 12 : 6} md={3}>
               <Card>
                 <CardHeader
-                  title={tier.title}
+                  title={tier.title.includes('empresas') ? tier.title : tier.title}
                   subheader={tier.subheader}
-                  titleTypographyProps={{ align: 'center' }}
+                  titleTypographyProps={{ align: 'center', variant:'h6' }}
                   subheaderTypographyProps={{ align: 'center' }}
                   action={tier.title === 'Pro' ? null : null}
                   className={classes.cardHeader}
                 />
                 <CardContent>
-                  <div className={classes.cardPricing}>
-                    <Typography component="h2" variant="h3" color="textPrimary">
-                      ${tier.price}
-                    </Typography>
-                    <Typography variant="h6" color="textSecondary">
-                      /mo
-                    </Typography>
-                  </div>
-                  {tier.description.map(line => (
-                    <Typography variant="subtitle1" align="center" key={line}>
-                      {line}
-                    </Typography>
-                  ))}
+                  <Box sx={{display:'flex', flexDirection: 'column', height:325, alignContent:'center'}} >
+                    <div className={classes.cardPricing}>
+                      <Typography component="h2" variant="h3" color="textPrimary">
+                        ${tier.price}
+                      </Typography>
+                      <Typography variant="h6" color="textSecondary">
+                        /mo
+                      </Typography>
+                    </div>
+                    {tier.description.map(line => (
+                      <Typography variant="subtitle1" align="center" key={line}>
+                        {line}
+                      </Typography>
+                    ))}
+                  </Box>
                 </CardContent>
                 <CardActions className={classes.cardActions}>
                   <Button fullWidth variant={tier.buttonVariant} color="primary">

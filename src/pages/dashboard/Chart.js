@@ -2,7 +2,9 @@ import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
 import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
-
+import { Typography } from '@mui/material';
+import InfoIcon from '@mui/icons-material/Info';
+import { Info } from '@mui/icons-material';
 // Generate Sales Data
 function createData(time, amount) {
   return { time, amount };
@@ -25,7 +27,7 @@ export default function Chart() {
 
   return (
     <React.Fragment>
-      <Title>Today</Title>
+      <Title>Ventas hoy</Title>
       <ResponsiveContainer>
         <LineChart
           data={data}
@@ -54,7 +56,7 @@ export default function Chart() {
                 ...theme.typography.body1,
               }}
             >
-              Sales ($)
+              Ventas (cant.)
             </Label>
           </YAxis>
           <Line
@@ -66,6 +68,9 @@ export default function Chart() {
           />
         </LineChart>
       </ResponsiveContainer>
+      
+      <Typography m="1em" color="green">
+      <Info/>   Te recomendamos realizar campañas en dias como hoy en donde las ventas para tu rubro se incrementan</Typography>
     </React.Fragment>
   );
 }

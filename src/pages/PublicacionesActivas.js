@@ -12,23 +12,18 @@ import {
   Grid,
   Stack,
 } from "@mui/material";
+import UnstyledTabsIntroduction from "../components/Tab";
 
 
 function PublicacionesActivasComponent() {
 
   return (
-    <>
-      <Stack>
-        <Box bgcolor="red">asd</Box>
-        <Box bgcolor="green">asd</Box>
-        <Box bgcolor="blue">asd</Box>
-      </Stack>
-    </>
+        <UnstyledTabsIntroduction/>
   );
 }
 
 function PublicacionesActivas() {
-  return <BackgroundLayout component={<PublicacionesActivasComponent />} />;
+  return <BackgroundLayout title="Remera Amarilla" component={<PublicacionesActivasComponent />} />;
 }
 
 export default PublicacionesActivas;

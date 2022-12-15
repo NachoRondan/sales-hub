@@ -9,6 +9,8 @@ import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
 import BackgroundLayout from '../../Layout/BackgroundLayout';
+import BarChartComponent from '../../components/BarChart';
+
 
 
 const mdTheme = createTheme();
@@ -17,6 +19,7 @@ function DashboardContent() {
 
   return (
     <ThemeProvider theme={mdTheme}>
+      
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
 
@@ -37,15 +40,17 @@ function DashboardContent() {
             <Grid container spacing={3}>
               {/* Chart */}
               <Grid item xs={12} md={8} lg={9}>
+              
                 <Paper
                   sx={{
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 240,
+                    height: 370,
                   }}
                 >
-                  <Chart />
+ 
+                  <BarChartComponent />
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
@@ -61,10 +66,35 @@ function DashboardContent() {
                   <Deposits />
                 </Paper>
               </Grid>
-              {/* Recent Orders */}
+              {/* Bar Chart */}
               <Grid item xs={12}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <Orders />
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 370 }}>
+                  <Chart />
+                </Paper>
+              </Grid>
+              <Grid item xs={12} md={8} lg={9}>
+              
+              <Paper
+                sx={{
+                  p: 2,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: 370,
+                }}
+              >
+                <Orders />
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={4} lg={3}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 240,
+                  }}
+                >
+                  <Deposits />
                 </Paper>
               </Grid>
             </Grid>
@@ -77,6 +107,6 @@ function DashboardContent() {
 
 export default function Dashboard() {
   return (
-    <BackgroundLayout component={<DashboardContent/>} />
+    <BackgroundLayout title="Dashboard" component={<DashboardContent/>} />
   )
 }

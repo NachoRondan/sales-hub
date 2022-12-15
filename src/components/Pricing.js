@@ -55,35 +55,54 @@ const styles = theme => ({
 
 const tiers = [
   {
-    title: 'Free',
+    title: 'Gratis',
     price: '0',
-    description: ['10 users included', '2 GB of storage', 'Help center access', 'Email support'],
-    buttonText: 'Sign up for free',
+    description: [
+      '1 analista de ventas',
+      '1 plataforma',
+      'Gestiona fácilmente desde un único lugar',
+      'Soporte comunitario'],
+    buttonText: 'Registrate gratis',
     buttonVariant: 'outlined',
   },
   {
     title: 'Pro',
-    subheader: 'Most popular',
+    subheader: 'El recomendado',
     price: '15',
     description: [
-      '20 users included',
-      '10 GB of storage',
-      'Help center access',
-      'Priority email support',
+      '5 empleados',
+      '3 plataformas',
+      'Gestiona fácilmente desde un único lugar',
+      'Recibi informacion privilegiada sobre tus ventas',
+      'Soporte 24/7',
     ],
-    buttonText: 'Get started',
+    buttonText: 'Iniciá ahora',
     buttonVariant: 'contained',
   },
   {
-    title: 'Enterprise',
+    title: 'Pequeñas empresas',
     price: '30',
     description: [
-      '50 users included',
-      '30 GB of storage',
-      'Help center access',
-      'Phone & email support',
+      '10 empleados',
+      '4 plataformas',
+      'Gestiona fácilmente desde un único lugar',
+      'Recibi informacion privilegiada sobre tus ventas',
+      'Sopote personalizado',
     ],
-    buttonText: 'Contact us',
+    buttonText: 'Contactate',
+    buttonVariant: 'outlined',
+  },
+  {
+    title: 'Grandes empresas',
+    price: '45',
+    description: [
+      'Usuarios ilimitados',
+      'Todas las plataformas disponibles',
+      'Gestiona fácilmente desde un único lugar',
+      'Recibi informacion privilegiada sobre tus ventas',
+      'Sopote personalizado',
+    ],
+    buttonText: 'Contactate',
     buttonVariant: 'outlined',
   },
 ];
@@ -119,15 +138,15 @@ function Pricing(props) {
             Pricing
           </Typography>
           <Typography variant="h6" align="center" color="textSecondary" component="p">
-            Quickly build an effective pricing table for your potential customers with this layout.
-            It&apos;s built with default Material-UI components with little customization.
+           Ofrecemos distintos planes que se ajustan a tu negocio. Registrate gratis o paga por la cantidad de plataformas en las cuales queres expandir tu negocio.
+            Contrata por cantidad de empleados o tamaño de empresa .
           </Typography>
         </div>
         {/* End hero unit */}
-        <Grid container spacing={40} alignItems="flex-end">
+        <Grid container spacing={20} alignItems="flex-end">
           {tiers.map(tier => (
             // Enterprise card is full width at sm breakpoint
-            <Grid item key={tier.title} xs={12} sm={tier.title === 'Enterprise' ? 12 : 6} md={4}>
+            <Grid item key={tier.title} xs={12} sm={tier.title === 'Grandes empresas' || tier.title === 'Pequeñas empresas' ? 12 : 6} md={3}>
               <Card>
                 <CardHeader
                   title={tier.title}
@@ -163,22 +182,7 @@ function Pricing(props) {
         </Grid>
       </main>
       {/* Footer */}
-      <footer className={classNames(classes.footer, classes.layout)}>
-        <Grid container spacing={32} justify="space-evenly">
-          {footers.map(footer => (
-            <Grid item xs key={footer.title}>
-              <Typography variant="h6" color="textPrimary" gutterBottom>
-                {footer.title}
-              </Typography>
-              {footer.description.map(item => (
-                <Typography key={item} variant="subtitle1" color="textSecondary">
-                  {item}
-                </Typography>
-              ))}
-            </Grid>
-          ))}
-        </Grid>
-      </footer>
+
       {/* End footer */}
     </React.Fragment>
   );

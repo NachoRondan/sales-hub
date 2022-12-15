@@ -23,7 +23,7 @@ function PublicacionesActivasComponent() {
 }
 
 function PublicacionesActivas() {
-  return <BackgroundLayout component={<PublicacionesActivasComponent />} />;
+  return <BackgroundLayout title="Remera Amarilla" component={<PublicacionesActivasComponent />} />;
 }
 
 export default PublicacionesActivas;

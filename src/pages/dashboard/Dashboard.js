@@ -46,7 +46,7 @@ function DashboardContent() {
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 240,
+                    height: 370,
                   }}
                 >
  
@@ -68,8 +68,8 @@ function DashboardContent() {
               </Grid>
               {/* Bar Chart */}
               <Grid item xs={12}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <Orders />
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 370 }}>
+                  <Chart />
                 </Paper>
               </Grid>
               <Grid item xs={12} md={8} lg={9}>
@@ -79,10 +79,10 @@ function DashboardContent() {
                   p: 2,
                   display: 'flex',
                   flexDirection: 'column',
-                  height: 240,
+                  height: 370,
                 }}
               >
-                <Chart />
+                <Orders />
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>

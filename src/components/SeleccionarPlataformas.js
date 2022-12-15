@@ -65,7 +65,7 @@ export function SeleccionarPlataformasComponent(props) {
             />
             <Divider p={2} />
             <FormControlLabel
-              control={<Switch color={"success"} />}
+              control={<Switch color={"success"}  />}
               label={<Typography variant="h4">Facebook</Typography>}
             />
             <Divider />

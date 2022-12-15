@@ -11,6 +11,8 @@ import {
 
 import Title from "../pages/dashboard/Title";
 import { ResponsiveContainer } from "recharts";
+import { Typography } from "@mui/material";
+import { Info } from "@mui/icons-material";
 
 const data = [
   {
@@ -60,6 +62,8 @@ export default function BarChartComponent() {
       <Bar dataKey="saleshub" fill="#ffcc00" />
     </BarChart>
     </ResponsiveContainer>
+    <Typography m="1em" color="green">
+    <Info/>   Instagram es la plataforma que mas ingresos genero en tu cuenta este mes</Typography>
   </React.Fragment>
     
   );

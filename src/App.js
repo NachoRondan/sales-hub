@@ -13,6 +13,7 @@ import SeleccionarPlataformas from "./components/SeleccionarPlataformas";
 import PublicacionesActivas from "./pages/PublicacionesActivas";
 
 import Dashboard from './pages/dashboard/Dashboard';
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="" element={<LandingHome />} />
+        <Route path="login" element={<Login />} />
         <Route path="mi-perfil" element={<Perfil />} />
         <Route path="publicaciones-activas" element={<PublicacionesActivas />} />
         <Route path="mis-publicaciones" element={<PublicacionesHome />} />
